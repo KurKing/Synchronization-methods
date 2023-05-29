@@ -30,9 +30,7 @@ public class JournalExecutor {
                     Random random = new Random();
                     int teacherIndex = random.nextInt(teachers.length);
 
-                    Mark mark = new Mark(random.nextInt(1, 100), teachers[teacherIndex]);
-
-                    pool.submit(new PutMarkThread(mark, group, journal, student));
+                    pool.submit(teachers[teacherIndex].putMark(journal, group, student));
                 }
             }
         }

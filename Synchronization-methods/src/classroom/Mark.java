@@ -14,6 +14,6 @@ public class Mark {
     @Override
     public String toString() {
 
-        return "\t{From: " + teacher.name() + " - " + score+"}";
+        return "\t{From: " + teacher.getName() + " - " + score+"}";
     }
 }
